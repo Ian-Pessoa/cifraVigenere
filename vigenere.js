@@ -28,6 +28,8 @@ function expandirChave(chave, tamanhoTexto){
 }
 
 function cifrarVigenere(textoClaro, chave) {
+    if(textoClaro.length === 0) throw new Error("Texto deve ser informada.")
+
     const { mapaIndice, mapaCaractere, tamanho } = criarMapas(ALFABETO);
     const chaveExpandida = expandirChave(chave, textoClaro.length);
 
@@ -56,6 +58,8 @@ function cifrarVigenere(textoClaro, chave) {
 }
 
 function decifrarVigenere(textoCifrado, chave) {
+    if(textoCifrado.length === 0) throw new Error("Texto deve ser informada.")
+
     const { mapaIndice, mapaCaractere, tamanho } = criarMapas(ALFABETO);
     const chaveExpandida = expandirChave(chave, textoCifrado.length);
 
@@ -84,7 +88,7 @@ function decifrarVigenere(textoCifrado, chave) {
 }
 
 if(require.main === module){
-    const textoClaro = '"OLA_MUNDO"';
+    const textoClaro = '';
     const chave = "CHAVE";
 
     console.log("Alfabeto:", ALFABETO);
