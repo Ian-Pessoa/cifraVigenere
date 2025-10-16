@@ -28,7 +28,7 @@ function expandirChave(chave, tamanhoTexto){
 }
 
 function cifrarVigenere(textoClaro, chave) {
-    if(textoClaro.length === 0) throw new Error("Texto deve ser informada.")
+    if(textoClaro.length === 0) throw new Error("Texto deve ser informado.")
 
     const { mapaIndice, mapaCaractere, tamanho } = criarMapas(ALFABETO);
     const chaveExpandida = expandirChave(chave, textoClaro.length);
@@ -58,7 +58,7 @@ function cifrarVigenere(textoClaro, chave) {
 }
 
 function decifrarVigenere(textoCifrado, chave) {
-    if(textoCifrado.length === 0) throw new Error("Texto deve ser informada.")
+    if(textoCifrado.length === 0) throw new Error("Texto deve ser informado.")
 
     const { mapaIndice, mapaCaractere, tamanho } = criarMapas(ALFABETO);
     const chaveExpandida = expandirChave(chave, textoCifrado.length);
